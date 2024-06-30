@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Impedisce il wrapping dei prodotti */
+    justify-content: flex-start; /* Allinea i prodotti a sinistra */
+    padding: 20px;
+    margin-top: 20px; /* Aggiunto margine superiore */
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    overflow-y: hidden; /* Nascondi la barra di scorrimento verticale */
+    white-space: nowrap; /* Impedisce la riga di andare a capo */
+    width: auto; /* Imposta la larghezza in base al contenuto */
+}
+
+.productcard {
+    width: 200px; /* Dimensioni del prodotto */
+    height: auto;
+    padding: 20px;
+    margin-right: 20px; /* Aggiunto margine destro */
+    text-align: center;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Per contenere il nome del prodotto */
+}
+
+.productcard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.productcard img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+    display: block;
+    margin-bottom: 15px; /* Aggiunge spazio sotto l'immagine */
+}
+
+.productcard img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.productcard button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+.productcard button:hover {
+    opacity: 0.8;
+}
+
+.productcard .product-name {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #000;
+    white-space: nowrap; /* Impedisce il testo di andare a capo */
+    overflow: hidden; /* Nasconde il testo eccedente */
+    text-overflow: ellipsis; /* Aggiunge i puntini di sospensione */
+    display: block;
+}
+
+.productcard .product-price {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #000;
+}
+
+/* Media Query per la responsività */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Consente il wrapping dei prodotti su schermi più piccoli */
+        justify-content: center; /* Allinea i prodotti al centro */
+    }
+
+    .productcard {
+        margin-right: 10px; /* Riduce il margine destro per adattarsi meglio */
+        margin-bottom: 20px; /* Aggiunge margine sotto ogni card */
+    }
+}

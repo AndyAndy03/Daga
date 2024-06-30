@@ -1,0 +1,103 @@
+body.background {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-image: url("./WebContent/gioielli.jpg");
+	/* Cambia con il percorso della tua immagine */
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+}
+
+.form-container {
+	background-color: rgba(230, 230, 230, 0.8);
+	/* Semitrasparente */
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 400px;
+	width: 100%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.form-container h2 {
+	margin-bottom: 20px;
+}
+
+.form-container label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.form-container input {
+	width: calc(100% - 20px);
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.form-container button {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #000;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+	background-color: #333;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+	body.background {
+		padding: 20px;
+		/* Aggiungi padding per evitare che la form tocchi i bordi dello schermo */
+	}
+
+	.form-container {
+		padding: 10px;
+		max-width: 100%;
+		/* Assicura che il contenitore non ecceda la larghezza dello schermo */
+	}
+
+	.form-container input {
+		width: calc(100% - 10px);
+		/* Riduce la larghezza degli input */
+		padding: 8px;
+		/* Riduce il padding degli input */
+	}
+
+	.form-container button {
+		padding: 8px;
+		/* Riduce il padding del pulsante */
+		font-size: 14px;
+		/* Riduce la dimensione del font del pulsante */
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.form-container input {
+		width: 100%;
+		/* Imposta la larghezza degli input al 100% */
+		padding: 6px;
+		/* Riduce ulteriormente il padding degli input */
+	}
+
+	.form-container button {
+		padding: 6px;
+		/* Riduce ulteriormente il padding del pulsante */
+		font-size: 12px;
+		/* Riduce ulteriormente la dimensione del font del pulsante */
+	}
+}

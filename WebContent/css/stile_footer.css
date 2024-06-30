@@ -1,0 +1,88 @@
+footer {
+    padding: 10px;
+    height: 250px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    max-width: 1200px; /* Limita la larghezza massima del contenitore */
+    margin: 0 auto; /* Centra il contenitore nella pagina */
+}
+
+.logo {
+    margin-left: 20px; /* Riduci il margine sinistro */
+}
+
+.logo img {
+    height: auto;
+    max-height: 150px; /* Limita l'altezza massima del logo */
+    width: auto;
+}
+
+.menu1,
+.menu2,
+.menu3 {
+    margin: 0 15px; /* Riduci il margine tra i menu */
+}
+
+.menu1 h3,
+.menu2 h3,
+.menu3 h3 {
+    margin: 50px 0 10px; /* Regola il margine del titolo del menu */
+}
+
+.menu1 a,
+.menu2 a,
+.menu3 a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pag {
+    display: flex;
+    align-items: center;
+}
+
+.pag img {
+    height: 40px; /* Riduci l'altezza dell'icona */
+    width: auto;
+}
+
+/* Media query per schermi di larghezza massima 768px (tablet e dispositivi mobili) */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Mostra gli elementi del footer in colonna */
+        height: auto; /* Altezza automatica */
+        padding: 20px; /* Aumenta il padding per una migliore spaziatura */
+        text-align: center; /* Centra il testo all'interno del footer */
+    }
+
+    .container {
+        flex-wrap: wrap; /* Permette il wrapping dei menu su schermi più piccoli */
+        padding: 0 20px; /* Riduci il padding del contenitore */
+    }
+
+    .menu1,
+    .menu2,
+    .menu3 {
+        margin: 15px 0; /* Riduci il margine tra i menu */
+    }
+
+    .menu1 h3,
+    .menu2 h3,
+    .menu3 h3 {
+        margin: 30px 0 10px; /* Regola il margine del titolo del menu */
+    }
+}

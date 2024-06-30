@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.5); /* Nero trasparente */
+	background-image: url("./resource/Prodotti/Uomo/Anelli/ane010stU/837976280.webp"),
+		url("./resource/Prodotti/Donna/Anelli/ane003stD/c1425705-model.jpg");
+	background-position: center top, center bottom;
+	background-size: cover, cover;
+	background-blend-mode: multiply, multiply;
+	background-repeat: no-repeat, no-repeat;
+	display: flex;
+	justify-content: center; /* Centra il contenuto orizzontalmente */
+	align-items: center; /* Centra il contenuto verticalmente */
+	height: 100vh; /* Altezza pari all'intera finestra del browser */
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+	width: 20%;
+	border-radius: 50%;
+}
+
+/* Login Container */
+.login-container {
+	max-width: 400px;
+	width: 100%;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: rgba(190, 190, 190, 0.4); /* Nero trasparente */
+	color: white; /* Testo bianco */
+	z-index: 1; /* Assicura che il form sia sopra le immagini di sfondo */
+}
+
+.login-container form {
+	padding: 20px;
+}
+
+.login-container label {
+	font-weight: bold;
+	color: white; /* Testo bianco */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	background-color: white; /* Sfondo bianco */
+	color: black; /* Testo nero */
+}
+
+.login-container button {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border: none;
+	border-radius: 5px;
+	background-color: #44ff52; /* Colore sfondo del pulsante */
+	color: black; /* Colore testo del pulsante */
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.login-container button:hover {
+	background-color: #333;
+	color: white; /* Cambia il colore del testo al passaggio del mouse */
+}
+
+.login-container .psw a {
+	color: white; /* Testo bianco */
+	text-decoration: none;
+}
+
+/* Stile extra per il pulsante di cancellazione */
+.cancelbtn {
+	width: 30%;
+	background-color: #ff4444; /* Colore sfondo del pulsante */
+	color: white; /* Colore testo del pulsante */
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.cancelbtn:hover {
+	background-color: #cc0000; /* Cambia il colore sfondo al passaggio del mouse */
+}
+
+/* Media Query per schermi più piccoli */
+@media screen and (max-width: 600px) {
+	body {
+		padding: 20px; /* Aggiungi padding per piccoli schermi */
+	}
+	
+	.login-container {
+		padding: 10px;
+		max-width: 100%; /* Assicura che il contenitore non ecceda la larghezza dello schermo */
+	}
+
+	.login-container input[type="text"],
+	.login-container input[type="password"] {
+		padding: 10px;
+		margin: 8px 0;
+	}
+
+	.login-container button,
+	.cancelbtn {
+		padding: 10px;
+		margin: 8px 0;
+		width: 100%; /* Imposta la larghezza dei pulsanti al 100% per piccoli schermi */
+	}
+}

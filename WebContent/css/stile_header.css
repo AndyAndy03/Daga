@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+}
+
+/* Header Styles */
+header {
+	background-color: #fff;
+	padding: 20px 0;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000; /* Assicura che l'header rimanga sopra il contenuto */
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.logo {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.logo img {
+	height: 50px;
+}
+
+nav {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+}
+
+.search-bar {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px; /* Aggiunge spazio tra il menu e la barra di ricerca */
+}
+
+.search-bar input {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.search-bar button {
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	background-color: #333;
+	color: #fff;
+}
+
+/* Hero Section Styles */
+.hero {
+	background-image: url("hero-image.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 100px 20px; /* Aggiusta il padding per una migliore visualizzazione su schermi più piccoli */
+	text-align: center;
+	color: #fff;
+}
+
+.hero h1 {
+	font-size: 36px; /* Riduce la dimensione del titolo per schermi più piccoli */
+	margin-bottom: 0;
+}
+
+/* Media query per schermi con larghezza massima di 768px (tablet e dispositivi mobili) */
+@media (max-width: 768px) {
+	.container {
+		padding: 0 10px; /* Riduce il padding del contenitore per un layout più compatto */
+	}
+
+	.logo {
+		margin-right: 10px; /* Riduce il margine del logo */
+	}
+
+	nav {
+		display: block; /* Cambia il display del menu in blocco per una migliore visualizzazione */
+		margin-top: 10px; /* Aggiunge spazio sopra il menu */
+	}
+
+	nav li {
+		display: block; /* Cambia il display degli elementi del menu in blocco */
+		margin-right: 0; /* Rimuove il margine tra gli elementi del menu */
+		margin-bottom: 10px; /* Aggiunge spazio tra gli elementi del menu */
+	}
+
+	.search-bar {
+		display: block; /* Cambia il display della barra di ricerca in blocco */
+		margin-left: 0; /* Rimuove il margine sinistro della barra di ricerca */
+		margin-top: 10px; /* Aggiunge spazio sopra la barra di ricerca */
+	}
+
+	.search-bar input {
+		width: 100%; /* Occupa tutta la larghezza disponibile per l'input della ricerca */
+	}
+
+	.hero {
+		padding: 80px 10px; /* Riduce il padding della sezione hero per schermi più piccoli */
+	}
+
+	.hero h1 {
+		font-size: 28px; /* Riduce ulteriormente la dimensione del titolo per schermi più piccoli */
+	}
+}

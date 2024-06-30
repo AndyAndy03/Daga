@@ -1,0 +1,136 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+	position: relative;
+	width: 100%; /* Assicura che il contenitore si adatti alla larghezza del viewport */
+	max-width: 1000px; /* Limita la larghezza massima */
+	margin: auto; /* Centra il contenitore */
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+	cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Six columns side by side */
+.column {
+	float: left;
+	width: 16.66%;
+	padding: 5px; /* Aggiungi padding per spaziatura */
+}
+
+/* Add a transparency effect for thumbnail images */
+.demo {
+	opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+	.column {
+		width: 20%; /* Cinque colonne per schermi più piccoli */
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.column {
+		width: 25%; /* Quattro colonne per schermi più piccoli */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.column {
+		width: 33.33%; /* Tre colonne per schermi più piccoli */
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.prev,
+	.next {
+		font-size: 18px; /* Riduci dimensione testo dei pulsanti */
+		padding: 10px; /* Riduci padding dei pulsanti */
+	}
+
+	.column {
+		width: 50%; /* Due colonne per schermi più piccoli */
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.prev,
+	.next {
+		font-size: 16px; /* Riduci dimensione testo dei pulsanti */
+		padding: 8px; /* Riduci padding dei pulsanti */
+	}
+
+	.column {
+		width: 100%; /* Una colonna per schermi più piccoli */
+	}
+}
