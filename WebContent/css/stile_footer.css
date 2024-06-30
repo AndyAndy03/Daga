@@ -1,5 +1,5 @@
 footer {
-    padding: 10px;
+    padding: 0px;
     height: 250px;
     width: 100%;
     background-color: #000000;
@@ -70,7 +70,7 @@ footer {
     }
 
     .container {
-        flex-wrap: wrap; /* Permette il wrapping dei menu su schermi più piccoli */
+        flex-wrap: wrap; /* Permette il wrapping dei menu su schermi piï¿½ piccoli */
         padding: 0 20px; /* Riduci il padding del contenitore */
     }
 

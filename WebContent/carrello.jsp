@@ -242,7 +242,9 @@
 %>
 
 <div class="container total-container">
+<%if(!ca.isEmpty()){ %>
     TOTALE: &euro;<%=roundedValue%>
+    
     <form action="ShopCart" method="post">
      <% if (utente != null){ %>
         <input type="hidden" name="user" value="<%= utente.getUsername()%>">
@@ -251,8 +253,9 @@
         <%} %>
         <button type="submit">ACQUISTA</button>
     </form>
+    <%} %>
 </div>
 
-<%@ include file="./WebContent/footer.html" %>
 </body>
+<%@ include file="./WebContent/footer.html" %>
 </html>

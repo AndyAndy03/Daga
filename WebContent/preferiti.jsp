@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>HOME</title>
+<title>PREFERITI</title>
 <link rel="stylesheet" href="./css/stile_home.css">
 
 <style>
