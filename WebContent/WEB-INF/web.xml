@@ -230,6 +230,15 @@
 	</servlet-mapping>
 
 
+<servlet>
+		<servlet-name>UserCheck</servlet-name>
+		<servlet-class>it.unisa.controller.UserCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserCheck</servlet-name>
+		<url-pattern>/UserCheck</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>get_fattura_json</servlet-name>
 		<servlet-class>it.unisa.controller.get_fattura_json</servlet-class>

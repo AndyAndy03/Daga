@@ -30,8 +30,8 @@ String error = (String) request.getAttribute("error");
 
             <div class="container">
     <label for="username"><b>Username*</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
-
+    <input type="text" placeholder="Enter Username" name="username" id="userInput" required>
+	<h7 id="mess_username" style="color:red"></h7><br>
     <label for="password"><b>Password*</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
     
@@ -130,6 +130,33 @@ String error = (String) request.getAttribute("error");
     		
     		});
     	 
+     
+     const userInput = document.getElementById('userInput');
+     userInput.addEventListener('input', function(event) {
+    	 
+    	 const user = document.getElementById('userInput').value;
+    	 
+    	 let requestUrl = 'UserCheck?user='+user;
+    	 
+    	 
+             
+    	 $.ajax({
+    	        url: requestUrl, // URL della tua servlet
+    	        method: 'GET',
+    	        dataType: 'json',
+    	        success: function(response) {
+    	            
+    	             console.log(response);
+    	             if(response)
+    	            	 document.getElementById('mess_username').textContent ="username già registrata";
+    	             else
+    	             	document.getElementById('mess_username').textContent ="";
+    					
+    	            }
+    	    
+    	})
+    		
+    		});
    
      
     </script>
